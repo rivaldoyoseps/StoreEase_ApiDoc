@@ -2,7 +2,7 @@
 
 ## Update Password
 
-Endpoints : PATCH /api/users/update-password
+Endpoints : PATCH /vi/api/users/update-password
 
 Headers:
 
@@ -56,7 +56,7 @@ Response Body Error :
 
 ## Update Detail User
 
-ENDPOINT: PATCH /api/users/me
+ENDPOINT: PATCH /v1/api/users/me
 
 Header:
 
@@ -139,6 +139,8 @@ Response Body Error:
 
 ## Delete User Account
 
+ENDPOINT : DELETE /v1/api/users/{userAccountId}
+
 Header:
 
 ```json
@@ -193,7 +195,7 @@ Response Error
 
 ### Get Address for Current Logged-in User
 
-Endpoint: GET /api/users/me/address
+Endpoint: GET /v1/api/users/me/address
 
 Headers:
 

@@ -2,7 +2,7 @@
 
 ## Register ADMIN & USER API
 
-Endpoints: POST /api/auth/register/{admin/user}
+Endpoints: POST /v1/api/auth/register/{admin/user}
 
 Headers:
 
@@ -88,7 +88,7 @@ Response Body Error:
 
 ## Login User API
 
-Endpoinst : POST/api/{user/login}/login
+Endpoinst : POST /v1/api/{user/login}/login
 
 Headers:
 
@@ -154,6 +154,8 @@ Response Body Error:
 ```
 
 ## LogOut User API (Kalau Pakai)
+
+Endpoint : Endpoint: POST /v1/api/auth/logout
 
 Headers:
 

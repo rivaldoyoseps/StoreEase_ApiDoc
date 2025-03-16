@@ -1,6 +1,6 @@
 ### CREATE CATEGORY SERVICE
 
-ENDPOINT : POST /api/category
+ENDPOINT : POST /v1/api/category
 
 Headers:
 
@@ -86,7 +86,7 @@ Response Error
 
 ### UPDATE CATEGORY SERVICE
 
-ENDPOINT : PATCH /api/category
+ENDPOINT : PATCH v1//api/category
 
 Headers:
 
@@ -173,7 +173,7 @@ Response Error
 
 ### GET ALL CATEGORY SERVICE
 
-ENDPOINT : GET /api/categories?page={page}&size={size}
+ENDPOINT : GET /v1/api/categories?page={page}&size={size}
 
 Headers:
 
@@ -264,7 +264,7 @@ Response Error
 
 ### GET BY ID CATEGORY SERVICE
 
-ENDPOINT : GET /api/category/{categoryId}
+ENDPOINT : GET /v1/api/category/{categoryId}
 
 Headers:
 
@@ -338,7 +338,7 @@ Response Error
 
 ### DELETE BY ID CATEGORY SERVICE
 
-ENDPOINT : DELETE /api/category/{categoryId}
+ENDPOINT : DELETE /v1/api/category/{categoryId}
 
 Headers:
 
