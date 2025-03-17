@@ -17,8 +17,8 @@ Request Body:
 
 ```json
 {
-    "oldPassword": "Rahasia123!",
-    "newPassword": "PasswordBaru123!"
+    "old_password": "Rahasia123!",
+    "new_password": "PasswordBaru123!"
 }
 ```
 
@@ -26,7 +26,7 @@ Response Body Success (200):
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Password updated successfully"
 }
 ```
@@ -37,19 +37,19 @@ Response Body Error :
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid password format",
     "errors": {
-        "newPassword": "Password must be at least 8 characters and contain a number"
+        "new_password": "Password must be at least 8 characters and contain a number"
     }
 }
 ```
 
-2.JIka password lama salah (401)
+2.JIka password lama salah (400)
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Old password is incorrect"
 }
 ```
@@ -71,13 +71,13 @@ Request Body:
 ```json
 {
     "fullname": "Yosep R Silaban",
-    "phoneNumber": "08109340193480",
+    "phone_number": "08109340193480",
     "email": "yosep@gmail.com",
-    "profilePicture": "https://storage.example.com/uploads/profile123.jpg",
+    "profile_picture": "https://storage.example.com/uploads/profile123.jpg",
     "address": {
         "street": "Jl. Merdeka No. 10",
         "city": "Jakarta",
-        "postalCode": "12345",
+        "postal_code": "12345",
         "address_detail": "di depan indomaret"
     }
 }
@@ -87,18 +87,18 @@ Response Body Success (200)
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Profile updated successfully",
     "data": {
         "fullname": "Yosep R Silaban",
-        "phoneNumber": "08109340193480",
+        "phone_number": "08109340193480",
         "email": "yosep@gmail.com",
-        "birthDate": "1999-09-09",
-        "profilePicture": "https://storage.example.com/uploads/profile123.jpg",
+        "birth_date": "1999-09-09",
+        "profile_picture": "https://storage.example.com/uploads/profile123.jpg",
         "address": {
             "street": "Jl. Merdeka No. 10",
             "city": "Jakarta",
-            "postalCode": "12345"
+            "postal_code": "12345"
         }
     }
 }
@@ -110,7 +110,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "User not found"
 }
 ```
@@ -119,11 +119,11 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid input",
     "errors": {
         "email": "Email format is incorrect",
-        "phoneNumber": "Phone number must be numeric"
+        "phone_number": "Phone number must be numeric"
     }
 }
 ```
@@ -132,7 +132,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -172,25 +172,25 @@ Response Error
 1. Password Salah
 
 ```json
-{ "status": "error", "message": "Incorrect password" }
+{ "status": 401, "message": "Incorrect password" }
 ```
 
 1. Tidak Login / toke tidak ada
 
 ```json
-{ "status": "error", "message": "Unauthorized. Token is required" }
+{ "status": 401, "message": "Unauthorized. Token is required" }
 ```
 
 1. Password Salah / token kadaluarsa
 
 ```json
-{ "status": "error", "message": "Invalid or expired token" }
+{ "status": 401, "message": "Invalid or expired token" }
 ```
 
 1. UserAccount tidak ditemukan
 
 ```json
-{ "status": "error", "message": "User not found" }
+{ "status": 404, "message": "User not found" }
 ```
 
 ### Get Address for Current Logged-in User
@@ -210,16 +210,16 @@ Response Success (200)
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "User addresses retrieved successfully",
     "data": {
-        "userAccountId": "qetqewtqweteqwt34123",
+        "use_account_id": "qetqewtqweteqwt34123",
         "username": "yoseprivaldos",
         "addresses": {
             "id": "addr-123",
             "street": "Jl. Merdeka No. 10",
             "city": "Jakarta",
-            "postalCode": "12345",
+            "postal_code": "12345",
             "country": "Indonesia"
         }
     }
@@ -234,5 +234,5 @@ Response Error
 4. User ditemukan tapi belum punya alamat
 
 ```json
-{ "status": "error", "message": "No address found for this user" }
+{ "status": 404, "message": "No address found for this user" }
 ```

@@ -23,7 +23,7 @@ RESPONSE SUCCESS:
 
 ```json
 {
-    "status": "success",
+    "status": 201,
     "message": "Payment transaction created successfully",
     "data": {
         "payment_id": "pay-001",
@@ -42,7 +42,7 @@ RESPONSE ERROR
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid Input",
     "errors": {
         "payment_method": "Payment method is required"
@@ -54,7 +54,7 @@ RESPONSE ERROR
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Transaction not found"
 }
 ```
@@ -63,7 +63,7 @@ RESPONSE ERROR
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -85,7 +85,7 @@ RESPONSE SUCCESS (200) :
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Payment status retrieved successfully",
     "data": {
         "payment_id": "pay-001",
@@ -104,7 +104,7 @@ RESPONSE ERROR
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Payment transaction not found"
 }
 ```
@@ -113,7 +113,7 @@ RESPONSE ERROR
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -145,7 +145,7 @@ RESPONSE BODY:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "webhook process successfully"
 }
 ```
@@ -156,7 +156,7 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid webhook payload"
 }
 ```
@@ -165,7 +165,7 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "transaction not found"
 }
 ```

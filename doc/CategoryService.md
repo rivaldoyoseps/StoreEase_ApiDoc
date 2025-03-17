@@ -32,7 +32,7 @@ Response SUccess
 
 ```json
 {
-    "status": "success",
+    "status": 201,
     "message": "Category created successfully",
     "data": {
         "id": "cat-123",
@@ -57,7 +57,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid input",
     "errors": {
         "name": "Category name is required",
@@ -70,7 +70,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 403,
     "message": "Forbidden. Only admins can create categories"
 }
 ```
@@ -79,7 +79,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -119,7 +119,7 @@ Response SUccess
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Category update successfully",
     "data": {
         "id": "cat-123",
@@ -144,7 +144,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid input",
     "errors": {
         "name": "Category name is required",
@@ -157,7 +157,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 403,
     "message": "Forbidden. Only admins can create categories"
 }
 ```
@@ -166,7 +166,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Category not found"
 }
 ```
@@ -188,7 +188,7 @@ Response SUccess
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Categories retrieved successfully",
     "data": [
         {
@@ -235,7 +235,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Page not found"
 }
 ```
@@ -244,7 +244,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid pagination parameters",
     "errors": {
         "page": "Page must be a positive integer",
@@ -257,7 +257,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -279,7 +279,7 @@ Response SUccess
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Category retrieved successfully",
     "data": {
         "id": "cat-123",
@@ -304,7 +304,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid category ID"
 }
 ```
@@ -313,7 +313,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 403,
     "message": "Forbidden. Only admins can create categories"
 }
 ```
@@ -322,7 +322,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Category not found"
 }
 ```
@@ -331,7 +331,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -353,7 +353,7 @@ Response SUccess
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Category deleted successfully"
 }
 ```
@@ -364,7 +364,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid category ID"
 }
 ```
@@ -373,7 +373,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 403,
     "message": "Forbidden. Only admins can create categories"
 }
 ```
@@ -382,7 +382,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Category not found"
 }
 ```
@@ -391,7 +391,7 @@ Response Error
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```

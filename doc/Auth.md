@@ -18,7 +18,7 @@ Request Body :
 ```json
 {
     "fullname": "Yosep R Silaban",
-    "phoneNumber": "08109340193480",
+    "phone_number": "08109340193480",
     "email": "yosep@gmail.com",
     "username": "yoseprivaldos",
     "password": "rahasia"
@@ -29,14 +29,14 @@ Response Body Success :
 
 ```json
 {
-    "status": "success created (201)",
+    "status": 201,
     "message": "Admin account registerd successfully",
     "data": {
         "id": "a1b2c3d4-e5f6-7890-gh12-ijkl34567890",
         "username": "yoseprivaldos",
         "name": "Yosep R Silaban",
         "email": "yosep@gmail.com",
-        "phoneNumber": "08109340193480",
+        "phone_number": "08109340193480",
         "createdAt": "2025-03-16T10:00:00Z"
     }
 }
@@ -48,7 +48,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 409,
     "message": "Email or username already registered"
 }
 ```
@@ -57,7 +57,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character"
 }
 ```
@@ -66,7 +66,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid input",
     "errors": {
         "email": "Invalid email format",
@@ -79,7 +79,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "You do not have permission to register an admin"
 }
 ```
@@ -111,7 +111,7 @@ Request Body:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Login successful",
     "data": {
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
@@ -136,7 +136,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Invalid email or password"
 }
 ```
@@ -145,7 +145,7 @@ Response Body Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid input",
     "errors": {
         "email": "Email format is incorrect"
@@ -169,7 +169,7 @@ Response Success (200 OK)
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Logout successful"
 }
 ```

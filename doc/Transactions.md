@@ -15,7 +15,7 @@ REQUEST BODY:
 
 ```json
 {
-    "categoryId": "cat-123",
+    "category_id": "cat-123",
     "pickup": true,
     "pickup_address": {
         "address": "Jl. Sudirman No. 10, Jakarta",
@@ -35,12 +35,13 @@ RESPONSE SUCCESS (201-Created):
 
 ```json
 {
-    "status": "success",
+    "status": 201,
     "message": "Transaction created successfully",
     "data": {
         "id": "trx-123",
+        "user_account_id": "dummy-useAccount-id",
         "status": "pending",
-        "categoryId": "cat-123",
+        "category_id": "cat-123",
         "pickup": true,
         "pickup_address": {
             "address": "Jl. Sudirman No. 10, Jakarta",
@@ -48,7 +49,7 @@ RESPONSE SUCCESS (201-Created):
             "longitude": 106.816666
         },
         "item": {
-            "id": "item-001",
+            "category_id": "item-001",
             "weight": 5,
             "volume": 0.02,
             "description": "Koper besar"
@@ -64,10 +65,10 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": "400",
     "message": "Invalid input",
     "errors": {
-        "categoryId": "Category is required",
+        "category_id": "Category is required",
         "item": "Item details are required"
     }
 }
@@ -77,7 +78,7 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -99,12 +100,12 @@ RESPONSE SUCCESS (201):
 
 ```json
 {
-    "status": "success",
+    "status": 201,
     "message": "Transaction retrieved successfully",
     "data": {
         "id": "trx-123",
         "status": "pending",
-        "categoryId": "cat-123",
+        "category_id": "cat-123",
         "pickup": true,
         "pickup_address": {
             "address": "Jl. Sudirman No. 10, Jakarta",
@@ -148,7 +149,7 @@ RESPONSE SUCCESS:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Transactions retrieved successfully",
     "data": {
         "id": "trx-123",
@@ -184,12 +185,12 @@ RESPONSE SUCCESS:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Transactions retrieved successfully",
     "data": {
         "id": "trx-123",
         "status": "pending",
-        "categoryId": "cat-123",
+        "category_id": "cat-123",
         "pickup": true,
         "total_price": 75000,
         "created_at": "2025-03-14T12:00:00Z"
@@ -228,7 +229,7 @@ RESPONSE SUCCESS:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Transaction detail status updated successfully",
     "data": {
         "id": "trx-123",
@@ -243,7 +244,7 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid status value"
 }
 ```
@@ -252,7 +253,7 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Transaction not found"
 }
 ```
@@ -261,7 +262,7 @@ RESPONSE ERROR:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```

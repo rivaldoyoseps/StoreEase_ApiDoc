@@ -23,7 +23,7 @@ Response Success:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Pickup request assigned successfully",
     "data": {
         "pickup_id": "pickup-123",
@@ -39,7 +39,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid input",
     "errors": {
         "assigned_to": "Employee ID is required"
@@ -51,7 +51,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -60,7 +60,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Pickup request not found"
 }
 ```
@@ -90,7 +90,7 @@ Response Success:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Pickup status updated successfully",
     "data": {
         "pickup_id": "pickup-123",
@@ -105,7 +105,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 400,
     "message": "Invalid status value"
 }
 ```
@@ -114,7 +114,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -123,7 +123,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Pickup request not found"
 }
 ```
@@ -145,7 +145,7 @@ Response Success:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Pickup request retrieved successfully",
     "data": {
         "pickup_id": "pickup-123",
@@ -169,7 +169,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 404,
     "message": "Pickup request not found"
 }
 ```
@@ -178,7 +178,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
@@ -200,7 +200,7 @@ Response Success:
 
 ```json
 {
-    "status": "success",
+    "status": 200,
     "message": "Pickup requests retrieved successfully",
     "data": [
         {
@@ -241,7 +241,7 @@ Response Error:
 
 ```json
 {
-    "status": "error",
+    "status": 401,
     "message": "Unauthorized. Token is required"
 }
 ```
